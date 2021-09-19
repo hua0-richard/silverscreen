@@ -1,0 +1,19 @@
+.current_bg {
+    background-color: grey;
+}
+
+.button {
+    transition: all .2s ease-in-out; 
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.img {
+    transition: all .5s ease-in-out; 
+}
+
+img:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,5 @@
+standardize image sizes
+high definition images
+animations
+larger collection of movies
+more efficient verification of movies missing data in OMDB
