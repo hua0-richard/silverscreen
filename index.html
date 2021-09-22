@@ -10,30 +10,32 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>quickview</title>
 
-    <style type="text/css">
-      body {background-color: black !important;}
-    </style>
-
   </head>
   <body>
-    <!-- Site Layout-->
-    <div class="container-md text-white min-vh-100">
-      <div class="d-flex justify-content-between" style="padding: 5rem;">
-        <!-- left button -->
-        <button class="btn btn-link" onclick="previousSampleMovie()" style="padding-right: 5rem; height: 100px; align-self: center; margin-top: 100px; color: white;"><i class="fas fa-arrow-left fa-3x"></i></button>
-        <div class="d-flex flex-column">
-          <h1 style="margin-bottom: 100px; align-self: center;">Featured</h1>
-          <div>
-          <!--Featured Card -->
-            <div class="card" style="width: 18rem;">
-              <img id="movie-poster" class="card-img-top" src="https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlZi00YmFjLTk1MmUtNWQwNTM0YjcyNTNkXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_FMjpg_UX1000_.jpg">
-            </div>
-          </div>
-        </div>
-        <!-- right button -->
-        <button class="btn btn-link" onclick="sampleMovie()" style="padding-left: 5rem; height: 100px; align-self: center; margin-top: 100px; color: white;"><i class="fas fa-arrow-right fa-3x"></i></button>
+
+  <div id="loadingScreen" class="loading-view-col">
+      <div class="loading-view">
+          <div class="dot-loader"></div>
+          <div class="dot-loader"></div>
+          <div class="dot-loader"></div>
       </div>
+  </div>
+
+    <!-- Site Layout-->
+    <div class="wrapper">
+        <div class="wrapper-sub1">
+            <!-- left button -->
+            <button id="buttonStyle" class="btn btn-link" onclick="previousSampleMovie()" style="padding-right: 5rem; height: 100px; align-self: center; margin-top: 100px; color: white;"><i class="fas fa-arrow-left fa-3x"></i></button>
+              <div class="container-featured">
+              <!--Featured Card -->
+              <img id="movie-poster" width="400px" height="600px" src="https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlZi00YmFjLTk1MmUtNWQwNTM0YjcyNTNkXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_FMjpg_UX1000_.jpg">
+                
+              </div>
+            <!-- right button -->
+            <button id="buttonStyle" class="btn btn-link" onclick="sampleMovie(); addLoadingAnimation()" style="padding-left: 5rem; height: 100px; align-self: center; margin-top: 100px; color: white;"><i class="fas fa-arrow-right fa-3x"></i></button>
+        </div>
     </div>
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

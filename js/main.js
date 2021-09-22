@@ -158,6 +158,15 @@ function previousSampleMovie() {
     reportMovie(foundMovies[reverseCount])
 }
 
+function delay(time) {
+    return new Promise(resolve => setTimeout(resolve, time));
+}
+
+function addLoadingAnimation() {
+    document.getElementById("loadingScreen").classList.add("show")
+    delay(1000).then(() => document.getElementById("loadingScreen").classList.remove("show"))
+
+}
 
 function test() {
     console.log("console")
