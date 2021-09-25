@@ -2,11 +2,12 @@
     margin: 50px; 
 }
 .wrapper {
+    font-family: 'Roboto Mono', monospace;
     display: flex; 
     height: 100vh; 
     flex-direction: column;
     justify-content: center;
-    background-color: rgb(0, 0, 0);
+    background: black;
     min-height: 300px; 
     z-index: 50; 
 }
@@ -28,7 +29,7 @@ button:hover {
     transform: scale(1.1);
 }
 
-.loading-view{
+.loading-view {
     display: flex; 
     justify-content: center;
 }
@@ -85,7 +86,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: black;
+    background: #1F2933;
     position: fixed; 
     height: 100vh;
     width: 100vw;
@@ -103,3 +104,62 @@ button:hover {
     z-index: -1;
 }
 
+.container-featured {
+    display: flex;
+    padding-bottom: 20px;
+    flex-direction: column;
+    background-color: #616E7C;
+}
+
+.infoBoxContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.infoBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#movieTitle {
+    text-align: left;
+}
+
+.cardLink1 {
+    background-color: #d6aa6f;
+    margin-top: 10px;
+    margin-bottom: 2px;
+    padding-left: 50px;
+    padding-right: 50px; 
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.cardLink2Container {
+    display: flex;
+    justify-content: center;
+}
+
+.cardLink2 {
+    background-color: #616E7C;
+    margin: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    width: 40%
+}
+
+.cardLink2:hover {
+    background-color: white;
+}
