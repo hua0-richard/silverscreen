@@ -167,6 +167,7 @@ button:hover {
 }
 
 .more {
+    color: white; 
     padding-top: 3px;
     padding-bottom: 3px;
 }

@@ -111,6 +111,7 @@ function getMovie(movieName) {
         .then((response) => {
             console.log(response);
             let movie = response.data.Poster; 
+            let movieName = response.data.Title; 
             console.log(movie)
             if (movie == null || movie == "N/A") {
                 sampleMovie();
@@ -118,7 +119,9 @@ function getMovie(movieName) {
                 foundMovies.push(modifiedMovieName)
                 console.log(modifiedMovieName)
                 var posterImage = document.getElementById("movie-poster")
-                posterImage.src = movie; 
+                var movieNameContainer = document.getElementById("movieTitle")
+                movieNameContainer.textContent = movieName
+                posterImage.src = movie
             }
         })
 
