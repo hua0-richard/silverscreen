@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body onload="sampleMovie(); addLoadingAnimation();">
 
   <div id="loadingScreen" class="loading-view-col">
       <div class="loading-view">
@@ -28,23 +28,23 @@
     <div class="wrapper">
         <div class="wrapper-sub1">
             <!-- left button -->
-            <button id="buttonStyle" class="btn btn-link" onclick="previousSampleMovie()" style="padding-right: 5rem; height: 100px; align-self: center; margin-top: 100px; color: white;"><i class="fas fa-arrow-left fa-3x"></i></button>
+            <a id="buttonStyle" onclick="previousSampleMovie()"><i class="fas fa-chevron-left fa-3x"></i></a>
               <div class="container-featured">
                 <!--Featured Card -->
-                <img id="movie-poster" width="400px" height="600px" src="https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlZi00YmFjLTk1MmUtNWQwNTM0YjcyNTNkXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_FMjpg_UX1000_.jpg">
+                <img id="movie-poster" width="400px" height="600px" src="black.png">
                 <div id="movieTitle">Movie Title</div>
                   <div class="infoBoxContainer">
                     <div class="infoBox">
-                      <div class="cardLink1">IMDB <i class="fab fa-imdb fa-lg"></i></div>
+                      <a id="movLink" class="cardLink1" target="_blank">IMDB <i class="fab fa-imdb fa-lg"></i></a>
                       <div class="cardLink2Container">
-                        <div class="cardLink2"><i class="fas fa-ellipsis-h" id="tripleDots"></i> More</i></div> 
-                        <div class="more"><i class="fas fa-plus-circle fa-lg"></i></div>
+                        <div class="cardLink2"><i class="fas fa-ellipsis-h fa-md" id="tripleDots"></i></div> 
+                        <div class="more"><i class="fas fa-plus fa-md"></i></div>
                       </div>
                     </div>
                 </div>
               </div>
             <!-- right button -->
-            <button id="buttonStyle" class="btn btn-link" onclick="sampleMovie(); addLoadingAnimation()" style="padding-left: 5rem; height: 100px; align-self: center; margin-top: 100px; color: white;"><i class="fas fa-arrow-right fa-3x"></i></button>
+            <a id="buttonStyle" onclick="sampleMovie(); addLoadingAnimation()"><i class="fas fa-chevron-right fa-3x"></i></a>
         </div>
     </div>
     

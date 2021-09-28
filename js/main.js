@@ -112,6 +112,7 @@ function getMovie(movieName) {
             console.log(response);
             let movie = response.data.Poster; 
             let movieName = response.data.Title; 
+            let imdbID = response.data.imdbID;
             console.log(movie)
             if (movie == null || movie == "N/A") {
                 sampleMovie();
@@ -120,6 +121,8 @@ function getMovie(movieName) {
                 console.log(modifiedMovieName)
                 var posterImage = document.getElementById("movie-poster")
                 var movieNameContainer = document.getElementById("movieTitle")
+                var imdbLink = document.getElementById("movLink")
+                imdbLink.href = ("https://www.imdb.com/title/"+imdbID)
                 movieNameContainer.textContent = movieName
                 posterImage.src = movie
             }
