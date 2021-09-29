@@ -218,13 +218,13 @@
 
 #infoCardContainerSecondary {
     display: flex;
-    flex-direction: column;
     justify-content: center; 
+    flex-direction: column;
 }
 
 #infoCard {
     display: flex; 
-    justify-content: center;
+    flex-direction: column;
     background-color:#1a1a1a;
     height: 667px;
     width: 333px; 
@@ -259,4 +259,26 @@
 #exitButton:hover {
     color: #505050;
     cursor: pointer;
+}
+
+.empty {
+    width: 10px;
+    height: 35px; 
+}
+
+.infoText {
+    color: white; 
+    font-family: 'Roboto Mono', monospace;
+    padding-left: 20px; 
+    padding-right: 20px; 
+    padding-top: 5px; 
+}
+
+#plotSummary {
+    color: white; 
+    font-family: 'Roboto Mono', monospace;
+    padding-left: 20px; 
+    padding-right: 20px; 
+    padding-top: 5px; 
+
 }

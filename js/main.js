@@ -109,22 +109,62 @@ var reverseCount = 0
 function getMovie(movieName) {
     axios.get('http://www.omdbapi.com/?apikey=5a1bf90d&t='+movieName)
         .then((response) => {
-            console.log(response);
             let movie = response.data.Poster; 
             let movieName = response.data.Title; 
             let imdbID = response.data.imdbID;
-            console.log(movie)
+            let moviePlot = response.data.Plot;
+            let releaseDate = response.data.Year;
+            let director = response.data.Director;
+            let cast = response.data.Actors;
+            let genre = response.data.Genre; 
+            let scores = response.data.Ratings;
             if (movie == null || movie == "N/A") {
-                sampleMovie();
+                sampleMovie()
             } else {
+                console.log(scores[0])
+                console.log(scores[2])
+                console.log(scores[1])
+
+                //IMDB
+                if (!(scores[0] === undefined)) {
+                    var scoresIMDB = scores[0].Value
+                } else {
+                    scoresIMDB = "N/A"
+                }
+                // Rotten Tomatoes
+                if (!(scores[1] === undefined)) {
+                    var scoresRT = scores[1].Value
+                } else {
+                    scoresRT = "N/A"
+                }
+                // Metacritic
+                if (!(scores[2] === undefined)) {
+                    var scoresMC = scores[2].Value
+                } else {
+                    scoresMC = "N/A"
+                }
+
                 foundMovies.push(modifiedMovieName)
-                console.log(modifiedMovieName)
                 var posterImage = document.getElementById("movie-poster")
                 var movieNameContainer = document.getElementById("movieTitle")
                 var imdbLink = document.getElementById("movLink")
+                var moviePlotDisplay = document.getElementById("plotSummary")
+                // Scores
+                
+                document.getElementById("MC").textContent = "Metacritic " + scoresIMDB
+                document.getElementById("IM").textContent = "IMDB " + scoresRT
+                document.getElementById("RT").textContent = "Rotten Tomatoes " + scoresMC
+            
+                // essential
+                moviePlotDisplay.textContent = moviePlot
                 imdbLink.href = ("https://www.imdb.com/title/"+imdbID)
                 movieNameContainer.textContent = movieName
                 posterImage.src = movie
+                // extraInfo
+                document.getElementById("genre").textContent = genre; 
+                document.getElementById("cast").textContent = cast; 
+                document.getElementById("director").textContent = director; 
+                document.getElementById("releaseDate").textContent = releaseDate; 
             }
         })
 
@@ -150,18 +190,13 @@ function reportMovie(movieName) {
 
 function sampleMovie() {
     var randomMovie = Math.floor((Math.random() * topHundred.length))
-    console.log(randomMovie)
     modifiedMovieName = topHundred[randomMovie];
     modifiedMovieName = modifiedMovieName.split(' ').join('+')
     getMovie(modifiedMovieName)
 }
 
 function previousSampleMovie() {
-    reverseCount = foundMovies.length - 2
-    if (reverseCount < 0) {
-        reverseCount = 0
-    }
-    reportMovie(foundMovies[reverseCount])
+    console.log(foundMovies)
 }
 
 function delay(time) {
