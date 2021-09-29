@@ -151,9 +151,9 @@ function getMovie(movieName) {
                 var moviePlotDisplay = document.getElementById("plotSummary")
                 // Scores
                 
-                document.getElementById("MC").textContent = "Metacritic " + scoresIMDB
-                document.getElementById("IM").textContent = "IMDB " + scoresRT
-                document.getElementById("RT").textContent = "Rotten Tomatoes " + scoresMC
+                document.getElementById("MC").textContent = "Metacritic " + scoresMC
+                document.getElementById("IM").textContent = "IMDB " + scoresIMDB
+                document.getElementById("RT").textContent = "Rotten Tomatoes " + scoresRT
             
                 // essential
                 moviePlotDisplay.textContent = moviePlot
