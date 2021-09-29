@@ -174,6 +174,16 @@ function addLoadingAnimation() {
 
 }
 
+function addInfoBox() {
+    document.getElementById("infoCardContainer").classList.add("show")
+}
+
+
+function removeInfoBox() {
+    document.getElementById("infoCardContainer").classList.remove("show")
+}
+
+
 function test() {
     console.log("console")
 }

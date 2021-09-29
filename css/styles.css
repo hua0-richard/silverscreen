@@ -1,6 +1,7 @@
 #buttonStyle {
     margin: 50px; 
     padding-right: 5rem; 
+    padding-left: 5rem; 
     height: 100px; 
     align-self: center; 
     margin-top: 100px; 
@@ -28,7 +29,8 @@
 }
 
 .container-featured {
-    transition: all .5s ease-in-out; 
+    width: 333px;
+   
 }
 
 .loading-view {
@@ -95,13 +97,13 @@
 }
 
 #loadingScreen.show {
-    visiblity: visible;
+    visibility: visible;
     opacity: 1;
     z-index: 100;
 }
 
 #loadingScreen {
-    visiblity: hidden;
+    visibility: hidden;
     opacity: 0;
     z-index: -1;
 }
@@ -134,6 +136,11 @@
     padding-top: 15px; 
     padding-left: 25px; 
     padding-bottom: 10px;
+}
+
+#movie-poster {
+    height: 500px;
+    width: 333px; 
 }
 
 .cardLink1 {
@@ -192,9 +199,63 @@
 .cardLink2:hover {
     color: white;
     background-color: #2c2c2c;
+    cursor: pointer;
 }
 
 #movLink:hover {
     text-decoration: none;
     color: #579aff;
+}
+
+.infoCardContainerStyle {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    position: fixed;
+}
+
+#infoCardContainerSecondary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+#infoCard {
+    display: flex; 
+    justify-content: center;
+    background-color:#1a1a1a;
+    height: 667px;
+    width: 333px; 
+}
+
+
+#infoCardContainer.show {
+    visibility: visible;
+    opacity: 1;
+    z-index: 200;
+}
+
+#infoCardContainer {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -2;
+}
+
+#infoCardDot {
+    width: 100%; 
+    display: flex;
+    justify-content: flex-end;
+}
+
+#exitButton {
+    color: #373737;
+    margin-top: 15px;
+    margin-right: 12px; 
+}
+
+#exitButton:hover {
+    color: #505050;
+    cursor: pointer;
 }

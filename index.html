@@ -23,6 +23,16 @@
           <div class="dot-loader"></div>
       </div>
   </div>
+  
+  <div id="infoCardContainer" class="infoCardContainerStyle">
+    <div id="infoCardContainerSecondary"> 
+      <div id="infoCard">
+        <div id="infoCardDot">
+          <i id="exitButton" class="fas fa-times-circle fa-lg" onclick="removeInfoBox()"></i>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!-- Site Layout-->
     <div class="wrapper">
@@ -31,13 +41,13 @@
             <a id="buttonStyle" onclick="previousSampleMovie()"><i class="fas fa-chevron-left fa-3x"></i></a>
               <div class="container-featured">
                 <!--Featured Card -->
-                <img id="movie-poster" width="400px" height="600px" src="black.png">
+                <img id="movie-poster" src="black.png">
                 <div id="movieTitle">Movie Title</div>
                   <div class="infoBoxContainer">
                     <div class="infoBox">
                       <a id="movLink" class="cardLink1" target="_blank">IMDB <i class="fab fa-imdb fa-lg"></i></a>
                       <div class="cardLink2Container">
-                        <div class="cardLink2"><i class="fas fa-ellipsis-h fa-md" id="tripleDots"></i></div> 
+                        <div class="cardLink2" onclick="addInfoBox()"><i class="fas fa-ellipsis-h fa-md" id="tripleDots"></i></div> 
                         <div class="more"><i class="fas fa-plus fa-md"></i></div>
                       </div>
                     </div>
