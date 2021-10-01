@@ -104,7 +104,7 @@ const topHundred = [
 ]
 
 const foundMovies = []
-var reverseCount = 0
+var index = 0
 
 function getMovie(movieName) {
     axios.get('http://www.omdbapi.com/?apikey=5a1bf90d&t='+movieName)
@@ -143,8 +143,7 @@ function getMovie(movieName) {
                 } else {
                     scoresMC = "N/A"
                 }
-
-                foundMovies.push(modifiedMovieName)
+                
                 var posterImage = document.getElementById("movie-poster")
                 var movieNameContainer = document.getElementById("movieTitle")
                 var imdbLink = document.getElementById("movLink")
@@ -165,6 +164,9 @@ function getMovie(movieName) {
                 document.getElementById("cast").textContent = cast; 
                 document.getElementById("director").textContent = director; 
                 document.getElementById("releaseDate").textContent = releaseDate; 
+                if (index == foundMovies.length) {
+                    foundMovies.push(modifiedMovieName)
+                }
             }
         })
 
@@ -193,10 +195,29 @@ function sampleMovie() {
     modifiedMovieName = topHundred[randomMovie];
     modifiedMovieName = modifiedMovieName.split(' ').join('+')
     getMovie(modifiedMovieName)
+
 }
 
-function previousSampleMovie() {
-    console.log(foundMovies)
+function currentMovie() {
+    console.log(index)
+    if (index == foundMovies.length) {
+        sampleMovie()
+    } else {
+        getMovie(foundMovies[index])
+    }
+}
+
+function nextMovie() {
+    index = index + 1
+    currentMovie()
+}
+
+function previousMovie() {
+    if (index == 0) {
+        return 
+    }
+    index = index - 1
+    currentMovie()
 }
 
 function delay(time) {
@@ -218,6 +239,11 @@ function removeInfoBox() {
     document.getElementById("infoCardContainer").classList.remove("show")
 }
 
+function addCheckMark() {
+
+    console.log("clicked")
+
+}
 
 function test() {
     console.log("console")

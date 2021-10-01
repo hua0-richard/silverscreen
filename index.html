@@ -46,10 +46,10 @@
   </div>
 
     <!-- Site Layout-->
-    <div class="wrapper">
+    <div id="main" class="wrapper">
         <div class="wrapper-sub1">
             <!-- left button -->
-            <a id="buttonStyle" onclick="previousSampleMovie()"><i class="fas fa-chevron-left fa-3x"></i></a>
+            <a id="buttonStyle" onclick="previousMovie(); addLoadingAnimation()"><i class="fas fa-chevron-left fa-3x"></i></a>
               <div class="container-featured">
                 <!--Featured Card -->
                 <img id="movie-poster" src="black.png">
@@ -59,13 +59,13 @@
                       <a id="movLink" class="cardLink1" target="_blank">IMDB <i class="fab fa-imdb fa-lg"></i></a>
                       <div class="cardLink2Container">
                         <div class="cardLink2" onclick="addInfoBox()"><i class="fas fa-ellipsis-h fa-md" id="tripleDots"></i></div> 
-                        <div class="more"><i class="fas fa-plus fa-md"></i></div>
+                        <div id="collectionList" class="more" onclick="addCheckMark()"><i class="fas fa-plus"></i></div>
                       </div>
                     </div>
                 </div>
               </div>
             <!-- right button -->
-            <a id="buttonStyle" onclick="sampleMovie(); addLoadingAnimation()"><i class="fas fa-chevron-right fa-3x"></i></a>
+            <a id="buttonStyle" onclick="nextMovie(); addLoadingAnimation()"><i class="fas fa-chevron-right fa-3x"></i></a>
         </div>
     </div>
     
