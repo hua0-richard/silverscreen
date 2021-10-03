@@ -259,8 +259,12 @@ function addMovieBox() {
     viewBox.appendChild(movieBox)
 }
 
-function test() {
-    console.log("console")
+function showSavedBox() {
+    document.getElementById("addViewContainerStyle").classList.add("show")
+
 }
 
+function hideSavedBox() {
+    document.getElementById("addViewContainerStyle").classList.remove("show")
+}
 

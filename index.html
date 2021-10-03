@@ -45,11 +45,15 @@
     </div>
   </div>
 
-  <div id = "addViewContainer" class="addViewContainerStyle">
+  <div class="addViewContainer" id="addViewContainerStyle">
     <div id="addViewContainerSecondary">
       <div id="addView">
+        <div class="addRemoveGroup">
+          <i class="fas fa-minus-square fa-2x" style="color:red"></i>
+          <i class="fas fa-plus-square fa-2x" style="color:green"></i>
+        </div>
         <div id="infoCardDot">
-          <i id="exitButton" class="fas fa-times-circle fa-lg" onclick="addMovieBox()"></i>
+          <i id="exitButton" class="fas fa-times-circle fa-lg" onclick="hideSavedBox()"></i>
         </div>
       </div>
       <div id="trueAddView"></div>
@@ -70,7 +74,7 @@
                       <a id="movLink" class="cardLink1" target="_blank">IMDB <i class="fab fa-imdb fa-lg"></i></a>
                       <div class="cardLink2Container">
                         <div class="cardLink2" onclick="addInfoBox()"><i class="fas fa-ellipsis-h fa-md" id="tripleDots"></i></div> 
-                        <div id="collectionList" class="more" onclick="addCheckMark()"><i class="fas fa-plus"></i></div>
+                        <div id="collectionList" class="more" onclick="showSavedBox()"><i class="fas fa-plus"></i></div>
                       </div>
                     </div>
                 </div>

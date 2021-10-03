@@ -286,13 +286,25 @@
 
 }
 
-#addViewContainer {
+.addViewContainer {
     background-color: green;
     width: 100vw;
     height: 100vh; 
     display: flex;
     justify-content: center;
     position: fixed; 
+}
+
+#addViewContainerStyle.show {
+    visibility: visible;
+    opacity: 1;
+    z-index: 300;
+}
+
+#addViewContainerStyle {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -3; 
 }
 
 #addViewContainerSecondary {
@@ -303,10 +315,8 @@
 
 #addView {
     display: flex; 
-    flex-direction: column;
     background-color:#1a1a1a;
-    overflow:scroll; 
-    height: 30px;
+    height: 60px;
     width: 333px; 
 }
 
@@ -314,9 +324,16 @@
     display: flex; 
     flex-direction: column;
     background-color:#1a1a1a;
-    overflow:scroll; 
-    height: 637px;
+    overflow:auto; 
+    height: 607px;
     width: 333px; 
 }
 
-
+.addRemoveGroup {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; 
+    margin-left: 25px; 
+    height: 50px;
+    width: 40%;
+}
