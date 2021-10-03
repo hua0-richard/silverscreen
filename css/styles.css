@@ -253,6 +253,7 @@
 
 #exitButton {
     color: #373737;
+    position: fixed;
     margin-top: 15px;
     margin-right: 12px; 
 }
@@ -263,6 +264,7 @@
 }
 
 .empty {
+    position: fixed;
     width: 10px;
     height: 35px; 
 }
@@ -282,6 +284,39 @@
     padding-right: 20px; 
     padding-top: 5px; 
 
+}
+
+#addViewContainer {
+    background-color: green;
+    width: 100vw;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    position: fixed; 
+}
+
+#addViewContainerSecondary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#addView {
+    display: flex; 
+    flex-direction: column;
+    background-color:#1a1a1a;
+    overflow:scroll; 
+    height: 30px;
+    width: 333px; 
+}
+
+#trueAddView {
+    display: flex; 
+    flex-direction: column;
+    background-color:#1a1a1a;
+    overflow:scroll; 
+    height: 637px;
+    width: 333px; 
 }
 
 

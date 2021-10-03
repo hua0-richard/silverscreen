@@ -245,6 +245,20 @@ function addCheckMark() {
 
 }
 
+function addMovieBox() {
+    var movieBox = document.createElement("div")
+    movieBox.style.display = "flex"
+    movieBox.style.justifyContent = "space-even"
+    movieBox.style.padding = "10px"
+    movieBox.style.margin = "10px"
+    movieBox.style.color = "white"
+    movieBox.style.backgroundColor = "black"
+    var text = document.createTextNode("Testing")
+    movieBox.appendChild(text)
+    var viewBox = document.getElementById("trueAddView")
+    viewBox.appendChild(movieBox)
+}
+
 function test() {
     console.log("console")
 }
